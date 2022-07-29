@@ -1,0 +1,45 @@
+# # PoolDatasetCreate0
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **string** | &#x60;encryption&#x60; when enabled will create an ZFS encrypted root dataset for &#x60;name&#x60; pool. There are 2 cases where ZFS encryption is not allowed for a dataset: 1) Pool in question is GELI encrypted. 2) If the parent dataset is encrypted with a passphrase and &#x60;name&#x60; is being created    with a key for encrypting the dataset. &#x60;encryption_options&#x60; specifies configuration for encryption of dataset for &#x60;name&#x60; pool. &#x60;encryption_options.passphrase&#x60; must be specified if encryption for dataset is desired with a passphrase as a key. Otherwise a hex encoded key can be specified by providing &#x60;encryption_options.key&#x60;. &#x60;encryption_options.generate_key&#x60; when enabled automatically generates the key to be used for dataset encryption. | [optional]
+**type** | **string** |  | [optional] [default to 'FILESYSTEM']
+**volsize** | **int** | &#x60;volsize&#x60; is required for type&#x3D;VOLUME and is supposed to be a multiple of the block size. | [optional]
+**volblocksize** | **string** | &#x60;sparse&#x60; and &#x60;volblocksize&#x60; are only used for type&#x3D;VOLUME. | [optional]
+**sparse** | **bool** | &#x60;sparse&#x60; and &#x60;volblocksize&#x60; are only used for type&#x3D;VOLUME. | [optional]
+**force_size** | **bool** |  | [optional]
+**comments** | [**\RMoore\Truenas\Model\Comments**](Comments.md) |  | [optional]
+**sync** | [**\RMoore\Truenas\Model\Sync**](Sync.md) |  | [optional]
+**compression** | [**\RMoore\Truenas\Model\Compression**](Compression.md) |  | [optional]
+**atime** | [**\RMoore\Truenas\Model\Atime**](Atime.md) |  | [optional]
+**exec** | [**\RMoore\Truenas\Model\Exec**](Exec.md) |  | [optional]
+**managedby** | [**\RMoore\Truenas\Model\Managedby**](Managedby.md) |  | [optional]
+**quota** | **int** |  | [optional]
+**quota_warning** | [**\RMoore\Truenas\Model\QuotaWarning**](QuotaWarning.md) |  | [optional]
+**quota_critical** | [**\RMoore\Truenas\Model\QuotaCritical**](QuotaCritical.md) |  | [optional]
+**refquota** | **int** |  | [optional]
+**refquota_warning** | [**\RMoore\Truenas\Model\RefquotaWarning**](RefquotaWarning.md) |  | [optional]
+**refquota_critical** | [**\RMoore\Truenas\Model\RefquotaCritical**](RefquotaCritical.md) |  | [optional]
+**reservation** | **int** |  | [optional]
+**refreservation** | **int** |  | [optional]
+**special_small_block_size** | [**\RMoore\Truenas\Model\SpecialSmallBlockSize**](SpecialSmallBlockSize.md) |  | [optional]
+**copies** | [**\RMoore\Truenas\Model\Copies**](Copies.md) |  | [optional]
+**snapdir** | [**\RMoore\Truenas\Model\Snapdir**](Snapdir.md) |  | [optional]
+**deduplication** | [**\RMoore\Truenas\Model\Deduplication**](Deduplication.md) |  | [optional]
+**checksum** | [**\RMoore\Truenas\Model\Checksum**](Checksum.md) |  | [optional]
+**readonly** | [**\RMoore\Truenas\Model\Readonly**](Readonly.md) |  | [optional]
+**recordsize** | [**\RMoore\Truenas\Model\Recordsize**](Recordsize.md) |  | [optional]
+**casesensitivity** | [**\RMoore\Truenas\Model\Casesensitivity**](Casesensitivity.md) |  | [optional]
+**aclmode** | [**\RMoore\Truenas\Model\Aclmode**](Aclmode.md) |  | [optional]
+**acltype** | [**\RMoore\Truenas\Model\Acltype**](Acltype.md) |  | [optional]
+**share_type** | **string** |  | [optional] [default to 'GENERIC']
+**xattr** | [**\RMoore\Truenas\Model\Xattr**](Xattr.md) |  | [optional]
+**encryption_options** | [**\RMoore\Truenas\Model\EncryptionOptions1**](EncryptionOptions1.md) |  | [optional]
+**encryption** | **bool** | &#x60;encryption&#x60; when enabled will create an ZFS encrypted root dataset for &#x60;name&#x60; pool. There are 2 cases where ZFS encryption is not allowed for a dataset: 1) Pool in question is GELI encrypted. 2) If the parent dataset is encrypted with a passphrase and &#x60;name&#x60; is being created    with a key for encrypting the dataset. | [optional] [default to false]
+**inherit_encryption** | **bool** |  | [optional] [default to true]
+**user_properties** | [**\RMoore\Truenas\Model\UserProperty[]**](UserProperty.md) |  | [optional]
+**create_ancestors** | **bool** |  | [optional] [default to false]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
